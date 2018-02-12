@@ -6,15 +6,18 @@ import {
 import styles from './styles'
 
 export default class Home extends Component {
-    static navigationOptions = {
-        title: 'Home',
-        headerStyle: {
-          backgroundColor: '#4B0082',
-        },
-        headerTintColor: '#fff',
-        headerTitleStyle: {
-          fontWeight: 'bold',
-        },
+    static navigationOptions = ({navigation}) => {
+        const {params} = navigation.state;
+        return {
+            title: params ? params.name + '\'s ' + 'Home' : null,
+            headerStyle: {
+            backgroundColor: '#4B0082',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+            fontWeight: 'bold',
+            },
+        }
       };
 
     render() {

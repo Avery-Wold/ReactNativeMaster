@@ -15,6 +15,17 @@ export default class Login extends Component {
         }
     }
 
+    static navigationOptions = {
+        title: 'React Native App',
+        headerStyle: {
+          backgroundColor: '#4B0082',
+        },
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+        },
+      };
+
     CheckNameInput = () => {
         const {name} = this.state;
 
