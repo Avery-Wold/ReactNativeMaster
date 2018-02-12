@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import { StyleSheet, 
-        Text, 
+import { Text, 
         View, 
         Button, 
         TextInput, 
         Alert } from "react-native";
+import styles from './styles'        
 
 export default class Login extends Component {
     constructor(props){
@@ -47,21 +47,3 @@ export default class Login extends Component {
         );
     }
 }
-
-const styles = StyleSheet.create({
-    mainView: {
-        flex: 1,
-        flexDirection: "column",
-        backgroundColor: "#CCCCCC"
-    },
-    topSpacer: {
-        flex: 0.3
-    },
-    buttonSpacer: {
-        flex: 0.2
-    },
-	name: {
-		fontSize: 20,
-		margin: 10,
-	}
-});

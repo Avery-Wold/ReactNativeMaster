@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import {
     Text,
-    View,
-    StyleSheet
+    View
 } from 'react-native';
+import styles from './styles'
 
 export default class Home extends Component {
     render() {
@@ -16,17 +16,3 @@ export default class Home extends Component {
         );
     }
 }
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		justifyContent: 'center',
-		alignItems: 'center',
-		backgroundColor: '#CCCCCC',
-	},
-	welcome: {
-		fontSize: 30,
-		textAlign: 'center',
-		margin: 10,
-	}
-});

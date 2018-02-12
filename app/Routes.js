@@ -1,7 +1,7 @@
 import { StackNavigator } from 'react-navigation'
 
-import Login from './Screens/Login'
-import Home from './Screens/Home'
+import Login from './Screens/Login/Login'
+import Home from './Screens/Home/Home'
 
 export default StackNavigator({
 	Login: {
