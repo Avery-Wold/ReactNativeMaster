@@ -1,58 +1,67 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
+import React, { Component } from "react";
+import { StyleSheet, 
+        Text, 
+        View, 
+        Button, 
+        TextInput, 
+        Alert } from "react-native";
 
-import React, { Component } from 'react';
-import {
-  Platform,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+export default class Login extends Component {
+    constructor(props){
+        super(props)
+    
+        this.state = {
+          name: '',
+        }
+    }
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+    CheckNameInput = () => {
+        const {name} = this.state;
 
-type Props = {};
-export default class Login extends Component<Props> {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
-      </View>
-    );
-  }
+        if (name == '')
+        {
+            Alert.alert("Please enter your name!");
+        }
+        else
+        {
+            this.props.navigation.navigate('Home', {name: this.state.name})
+        }
+    }
+
+    render() {
+        return (
+            <View style={styles.mainView}>
+                <View style={styles.topSpacer} />
+                <Text style={styles.name}>Name:</Text>
+                <TextInput style={styles.name}
+                    placeholder="Enter your name"
+                    onChangeText={(text) => this.setState({name:text})}
+                    value={this.state.name} />
+                <View style={styles.buttonSpacer} />
+                <Button
+                    color="#4B0082"
+                    title="Login"
+                    onPress={this.CheckNameInput}
+                />
+            </View>
+        );
+    }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+    mainView: {
+        flex: 1,
+        flexDirection: "column",
+        backgroundColor: "#CCCCCC"
+    },
+    topSpacer: {
+        flex: 0.3
+    },
+    buttonSpacer: {
+        flex: 0.2
+    },
+	name: {
+		fontSize: 20,
+		margin: 10,
+	}
 });
