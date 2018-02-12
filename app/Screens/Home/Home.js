@@ -11,11 +11,11 @@ export default class Home extends Component {
         return {
             title: params ? params.name + '\'s ' + 'Home' : 'Home',
             headerStyle: {
-            backgroundColor: '#4B0082',
+                backgroundColor: '#4B0082',
             },
             headerTintColor: '#fff',
             headerTitleStyle: {
-            fontWeight: 'bold',
+                fontWeight: 'bold',
             },
         }
       };
