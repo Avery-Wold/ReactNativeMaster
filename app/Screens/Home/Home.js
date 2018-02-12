@@ -9,7 +9,7 @@ export default class Home extends Component {
     static navigationOptions = ({navigation}) => {
         const {params} = navigation.state;
         return {
-            title: params ? params.name + '\'s ' + 'Home' : null,
+            title: params ? params.name + '\'s ' + 'Home' : 'Home',
             headerStyle: {
             backgroundColor: '#4B0082',
             },
