@@ -4,7 +4,8 @@ import { Text,
         Button, 
         TextInput, 
         Alert } from "react-native";
-import styles from './styles'        
+import styles from './styles'    
+import { NavigationActions } from "react-navigation";    
 
 export default class Login extends Component {
     constructor(props){
@@ -35,11 +36,21 @@ export default class Login extends Component {
         }
         else
         {
-            this.props.navigation.navigate('Home', {name: this.state.name})
+            let resetAction = NavigationActions.reset({
+                index: 0,
+                actions: [
+                    NavigationActions.navigate({
+                        routeName: 'Home',
+                        params: {name: this.state.name}
+                    })
+                ]
+            });
+            this.props.navigation.dispatch(resetAction);
         }
     }
 
     render() {
+        const { push } = this.props.navigation
         return (
             <View style={styles.mainView}>
                 <View style={styles.topSpacer} />

@@ -61,10 +61,10 @@ export default class Home extends Component {
         return (
             <View style={styles.container}>
                 {
-                    this.state.isVisible ? <Text style= {{ fontSize: 25, color: "#000", textAlign: 'center' }}> Good Afternoon </Text> : null
+                    this.state.isVisible ? <Text style= {{ fontSize: 25, textAlign: 'center' }}> Welcome </Text> : null
                 }
 
-                <Text style={styles.welcome}>{'Welcome, '+ name + '!'}</Text>
+                <Text style={styles.welcome}>{'Good Afternoon, '+ name + '!'}</Text>
 
                 <Button
                     color="#9370DB"
