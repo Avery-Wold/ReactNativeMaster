@@ -18,7 +18,7 @@ export default class Login extends Component {
     static navigationOptions = {
         title: 'React Native App',
         headerStyle: {
-          backgroundColor: '#4B0082',
+          backgroundColor: '#9370DB',
         },
         headerTintColor: '#fff',
         headerTitleStyle: {
@@ -29,7 +29,7 @@ export default class Login extends Component {
     CheckNameInput = () => {
         const {name} = this.state;
 
-        if (name == '')
+        if (name === '')
         {
             Alert.alert("Please enter your name!");
         }
@@ -50,7 +50,7 @@ export default class Login extends Component {
                     value={this.state.name} />
                 <View style={styles.buttonSpacer} />
                 <Button
-                    color="#4B0082"
+                    color="#9370DB"
                     title="Login"
                     onPress={this.CheckNameInput}
                 />
