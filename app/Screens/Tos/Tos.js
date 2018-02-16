@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View, TouchableOpacity, Alert } from "react-native";
+import { Text, 
+         View } from "react-native";
 import { Header } from "react-navigation";
 import styles from './styles'        
 

@@ -3,9 +3,7 @@ import {
     Text,
     View,
     Button,
-    TouchableOpacity,
-    Alert
-} from 'react-native';
+    TouchableOpacity } from 'react-native';
 import styles from './styles'
 
 export default class Home extends Component {
