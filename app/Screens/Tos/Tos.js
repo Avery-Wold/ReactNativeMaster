@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Text, 
-         View } from "react-native";
+import { Text, View } from "react-native";
 import { Header } from "react-navigation";
 import styles from './styles'        
 
@@ -15,7 +14,7 @@ export default class Tos extends Component {
     render() {
         return (
             <View style={styles.mainView}>
-                <Text>Terms of Service</Text>
+                <Text style= {{ fontSize: 20 }}>Terms of Service</Text>
             </View>
         );
     }
