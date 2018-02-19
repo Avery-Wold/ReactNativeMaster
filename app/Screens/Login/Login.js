@@ -50,7 +50,6 @@ export default class Login extends Component {
     }
 
     render() {
-        const { push } = this.props.navigation
         return (
             <View style={styles.mainView}>
                 <View style={styles.topSpacer} />

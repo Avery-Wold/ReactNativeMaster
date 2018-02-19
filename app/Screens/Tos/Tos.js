@@ -14,7 +14,7 @@ export default class Tos extends Component {
     render() {
         return (
             <View style={styles.mainView}>
-                <Text>Terms of Service</Text>
+                <Text style= {{ fontSize: 20 }}>Terms of Service</Text>
             </View>
         );
     }

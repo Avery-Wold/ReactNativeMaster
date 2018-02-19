@@ -2,7 +2,8 @@ import { StyleSheet } from 'react-native'
 
 export default StyleSheet.create({
     mainView: {
-        flex: 1
+        flex: 1,
+        backgroundColor: '#CCCCCC'
     },
     headerStyle: {
         backgroundColor: "#9370DB"

@@ -20,5 +20,8 @@ export default StyleSheet.create({
 	    headerButtonStyle: {
         color: "#FFFFFF",
         padding: 20
+	},
+	buttonSpacer: {
+        flex: 0.2
     }
 });

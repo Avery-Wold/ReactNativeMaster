@@ -4,7 +4,8 @@ import {
     View,
     Button,
     TouchableOpacity,
-    Alert
+    Alert,
+    Platform
 } from 'react-native';
 import styles from './styles'
 
@@ -14,6 +15,8 @@ export default class Home extends Component {
     
         this.state = {
           isVisible: true,
+          android: false,
+          iOS: false
         }
     }
 
@@ -53,25 +56,48 @@ export default class Home extends Component {
         this.setState({
             status: !this.state.isVisible
         })
-    }  
+    }
+    
+    AndroidOrIosChecker = () =>{
+        if(Platform.OS === 'android')
+        {
+            this.setState({android: true}),
+            this.setState({iOS: false})
+        }
+        else if (Platform.OS === 'ios')
+        {
+            this.setState({iOS: true}),
+            this.setState({android: false})
+        }
+        this.setState({
+            android: !this.state.android
+        })
+    }
 
     render() {
         const { params } = this.props.navigation.state;
         const name = params ? params.name : null;
         return (
             <View style={styles.container}>
-                {
+                {/* {
                     this.state.isVisible ? <Text style= {{ fontSize: 25, textAlign: 'center' }}> Welcome </Text> : null
-                }
-
-                <Text style={styles.welcome}>{'Good Afternoon, '+ name + '!'}</Text>
-
-                <Button
+                } */}
+                <Text style={styles.welcome}>{'Welcome, '+ name + '!'}</Text>
+                {/* <Button
                     color="#9370DB"
                     title="Show/Hide"
                     onPress={this.ShowHideTextComponentView}
+                /> */}
+                <View style= {{ margin: 10 }}/>
+                {
+                    this.state.android ? <Text style= {{ fontSize: 25, textAlign: 'center' }}> You are on Android </Text> : null
+                    || this.state.iOS ? <Text style= {{ fontSize: 25, textAlign: 'center' }}> You are on iOS </Text> : null
+                }
+                <Button
+                    color="#9370DB"
+                    title="Android or iOS"
+                    onPress={this.AndroidOrIosChecker}
                 />
-
             </View>
         );
     }
