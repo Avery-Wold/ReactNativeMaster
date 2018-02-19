@@ -46,13 +46,11 @@ export default class Home extends Component {
     AndroidOrIosChecker = () =>{
         if(Platform.OS === 'android')
         {
-            this.setState({android: true, isVisible: true}),
-            this.setState({iOS: false})
+            this.setState({android: true, isVisible: true})
         }
         else if (Platform.OS === 'ios')
         {
-            this.setState({iOS: true, isVisible: true}),
-            this.setState({android: false})
+            this.setState({iOS: true, isVisible: true})
         }
         this.setState({
             isVisible: !this.state.isVisible
