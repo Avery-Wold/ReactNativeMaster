@@ -42,20 +42,6 @@ export default class Home extends Component {
             )
         }
       };
-
-    ShowHideTextComponentView = () =>{
-        if(this.state.isVisible === true)
-        {
-            this.setState({isVisible: false})
-        }
-        else
-        {
-            this.setState({isVisible: true})
-        }
-        this.setState({
-            status: !this.state.isVisible
-        })
-    }
     
     AndroidOrIosChecker = () =>{
         if(Platform.OS === 'android')
@@ -78,15 +64,7 @@ export default class Home extends Component {
         const name = params ? params.name : null;
         return (
             <View style={styles.container}>
-                {/* {
-                    this.state.isVisible ? <Text style= {{ fontSize: 25, textAlign: 'center' }}> Welcome </Text> : null
-                } */}
                 <Text style={styles.welcome}>{'Welcome, '+ name + '!'}</Text>
-                {/* <Button
-                    color="#9370DB"
-                    title="Show/Hide"
-                    onPress={this.ShowHideTextComponentView}
-                /> */}
                 <View style= {{ margin: 10 }}/>
                 {
                     this.state.android && this.state.isVisible ? <Text style= {{ fontSize: 25, textAlign: 'center' }}> You are on Android </Text> : null
