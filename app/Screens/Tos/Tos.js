@@ -8,15 +8,7 @@ export default class Tos extends Component {
         header: undefined,
         title: "Terms of Service",
         headerTintColor: "#FFFFFF",
-        headerStyle: styles.headerStyle,
-        headerLeft: 
-            <TouchableOpacity
-                    onPress={() => {
-                        navigation.navigate("Home");
-                    }}
-            >
-            <Text style={styles.headerButtonStyle}>Cancel</Text>
-            </TouchableOpacity>
+        headerStyle: styles.headerStyle
     });
 
     render() {
