@@ -17,7 +17,7 @@ export default StyleSheet.create({
 		flex:1,
 		margin: 10
 	},
-	    headerButtonStyle: {
+	headerButtonStyle: {
         color: "#FFFFFF",
         padding: 20
 	},

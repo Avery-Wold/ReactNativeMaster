@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Text, View } from "react-native";
+import { Text, View, TouchableOpacity } from "react-native";
 import { Header } from "react-navigation";
 import styles from './styles'        
 
@@ -8,7 +8,15 @@ export default class Tos extends Component {
         header: undefined,
         title: "Terms of Service",
         headerTintColor: "#FFFFFF",
-        headerStyle: styles.headerStyle
+        headerStyle: styles.headerStyle,
+        headerLeft: 
+            <TouchableOpacity
+                    onPress={() => {
+                        navigation.navigate("Home");
+                    }}
+            >
+            <Text style={styles.headerButtonStyle}>Cancel</Text>
+            </TouchableOpacity>
     });
 
     render() {

@@ -7,5 +7,9 @@ export default StyleSheet.create({
     },
     headerStyle: {
         backgroundColor: "#9370DB"
-    }
+    },
+    	headerButtonStyle: {
+        color: "#FFFFFF",
+        padding: 20
+	}
 });
