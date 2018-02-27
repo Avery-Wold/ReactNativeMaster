@@ -4,8 +4,7 @@ import { Text,
         Button, 
         TextInput, 
         Alert,
-        FlatList,
-        ScrollView } from "react-native";
+        FlatList } from "react-native";
 import { Header } from "react-navigation";
 import styles from './styles'        
 
@@ -25,14 +24,13 @@ export default class CharacterList extends Component {
             {key: 'Cersei Lannister'},
             {key: 'Tywin Lannister'},
             {key: 'Danaerys Targaryen'},
-            {key: 'Olenna Tyrell'},
-            {key: 'Twelve'}
+            {key: 'Olenna Tyrell'}
         ]}
     }
 
     static navigationOptions = ({ navigation, screenProps }) => ({
         header: undefined,
-        title: "Flat List example",
+        title: "Character List",
         headerTintColor: "#FFFFFF",
         headerStyle: styles.headerStyle
     });
@@ -55,8 +53,8 @@ export default class CharacterList extends Component {
 
     render() {
         return (
-            <View style={styles.MainContainer}>
-                <FlatList
+            <View style={styles.mainView}>
+                <FlatList 
                     data={ this.state.FlatListItems } 
                     ItemSeparatorComponent = {this.FlatListItemSeparator}
                     renderItem={({item}) => <Text style={styles.item} onPress={this.GetItem.bind(this, item.key)} > {item.key} </Text>}

@@ -4,8 +4,7 @@ import { Text,
         Button, 
         TextInput, 
         Alert,
-        ScrollView,
-        Animated } from "react-native";
+        ScrollView } from "react-native";
 import { Header } from "react-navigation";
 import styles from './styles' 
 

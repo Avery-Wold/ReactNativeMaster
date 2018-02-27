@@ -39,7 +39,6 @@ export default class AnimatedQuotes extends React.Component {
         const {params} = navigation.state;
         return {
             title: params ? params.item + '\'s ' + 'Quote' : 'Quote',
-            header: undefined,
             headerLeft: null,
             headerTintColor: '#FFFFFF',
             headerStyle: styles.headerStyle
@@ -47,9 +46,7 @@ export default class AnimatedQuotes extends React.Component {
     };
   render() {
     return (
-      <View 
-      style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}
-      enableGestures={true}>
+      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
         <FadeInView>
             <Quotes/>
         </FadeInView>
