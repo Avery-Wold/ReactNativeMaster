@@ -41,7 +41,8 @@ export default class AnimatedQuotes extends React.Component {
             title: params ? params.item + '\'s ' + 'Quote' : 'Quote',
             headerLeft: null,
             headerTintColor: '#FFFFFF',
-            headerStyle: styles.headerStyle
+            headerStyle: styles.headerStyle,
+            gesturesEnabled: true
         }
     };
   render() {
