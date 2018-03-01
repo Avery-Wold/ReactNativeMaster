@@ -38,7 +38,7 @@ export default class AnimatedCharacterInfo extends Component {
     static navigationOptions = ({navigation, screenProps}) => {
         const {params} = navigation.state;
         return {
-            title: params ? params.item + '\'s ' + 'Quote' : 'Quote',
+            title: params ? params.item + '\'s ' + 'Information' : 'Information',
             headerLeft: null,
             headerTintColor: '#FFFFFF',
             headerStyle: styles.headerStyle,

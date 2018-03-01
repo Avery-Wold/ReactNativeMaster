@@ -9,16 +9,6 @@ import { Header } from "react-navigation";
 import styles from "./styles";
 
 export default class CharacterInfo extends Component {
-    static navigationOptions = ({navigation, screenProps}) => {
-        const {params} = navigation.state;
-        return {
-            title: params ? params.item + '\'s ' + 'Quote' : 'Quote',
-            header: undefined,
-            headerTintColor: '#FFFFFF',
-            headerStyle: styles.headerStyle
-        }
-    };
-
     render() {
         return (
             <ScrollView style={styles.mainView}>
