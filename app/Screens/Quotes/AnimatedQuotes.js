@@ -1,6 +1,6 @@
-import React from 'react';
-import { Animated, Text, View, ges } from 'react-native';
-import Quotes from './Quotes'
+import React, { Component } from 'react';
+import { Animated, Text, View } from 'react-native';
+import CharacterInfo from './Quotes'
 import styles from './styles' 
 
 class FadeInView extends React.Component {
@@ -34,7 +34,7 @@ class FadeInView extends React.Component {
   }
 }
 
-export default class AnimatedQuotes extends React.Component {
+export default class AnimatedCharacterInfo extends Component {
     static navigationOptions = ({navigation, screenProps}) => {
         const {params} = navigation.state;
         return {
@@ -49,7 +49,7 @@ export default class AnimatedQuotes extends React.Component {
     return (
       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
         <FadeInView>
-            <Quotes/>
+            <CharacterInfo/>
         </FadeInView>
       </View>
     )

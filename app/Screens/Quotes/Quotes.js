@@ -8,7 +8,7 @@ import { Text,
 import { Header } from "react-navigation";
 import styles from './styles' 
 
-export default class Quotes extends Component {
+export default class CharacterInfo extends Component {
     static navigationOptions = ({navigation, screenProps}) => {
         const {params} = navigation.state;
         return {
