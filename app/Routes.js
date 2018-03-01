@@ -3,13 +3,13 @@ import Login from './Screens/Login/Login'
 import Home from './Screens/Home/Home'
 import Tos from './Screens/Tos/Tos'
 import CharacterList from './Screens/CharacterList/CharacterList'
-import AnimatedCharacterInfo from './Screens/Quotes/AnimatedQuotes'
+import AnimatedCharacterInfo from './Screens/CharacterInfo/AnimatedCharacterInfo'
 
 const NavigationRoutes = {
     Login: { screen: Login },
     Home: { screen: Home },
     CharacterList: { screen: CharacterList},
-    AnimatedQuotes: { screen: AnimatedCharacterInfo}
+    AnimatedCharacterInfo: { screen: AnimatedCharacterInfo}
 };
 
 export const RootStack = StackNavigator(NavigationRoutes);

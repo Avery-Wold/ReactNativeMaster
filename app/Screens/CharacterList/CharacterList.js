@@ -45,7 +45,7 @@ export default class CharacterList extends Component {
       }
     
       GetItem (item) { 
-        this.props.navigation.navigate('AnimatedQuotes', {item})  
+        this.props.navigation.navigate('AnimatedCharacterInfo', {item})  
       }
 
     render() {

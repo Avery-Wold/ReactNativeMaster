@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Animated, Text, View } from 'react-native';
-import CharacterInfo from './Quotes'
-import styles from './styles' 
+import CharacterInfo from './CharacterInfo';
+import styles from './styles';
 
 class FadeInView extends React.Component {
   state = {

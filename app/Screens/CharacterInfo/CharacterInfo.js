@@ -6,7 +6,7 @@ import { Text,
         Alert,
         ScrollView } from "react-native";
 import { Header } from "react-navigation";
-import styles from './styles' 
+import styles from "./styles";
 
 export default class CharacterInfo extends Component {
     static navigationOptions = ({navigation, screenProps}) => {
