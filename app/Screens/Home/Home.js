@@ -75,11 +75,15 @@ export default class Home extends Component {
                     title="Android or iOS"
                     onPress={this.AndroidOrIosChecker}
                 />
-                <View style={styles.buttonSpacer} />
                 <Button
                     color="#9370DB"
                     title="Game Of Thrones Characters"
                     onPress={() => this.props.navigation.navigate('CharacterList')}
+                />
+                <Button
+                    color="#9370DB"
+                    title="Space Launch History"
+                    onPress={() => this.props.navigation.navigate('LaunchList')}
                 />
             </View>
         );

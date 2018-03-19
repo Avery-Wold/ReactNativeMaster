@@ -45,13 +45,14 @@ export default class AnimatedCharacterInfo extends Component {
             gesturesEnabled: true
         }
     };
-  render() {
-    return (
-      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-        <FadeInView>
-            <CharacterInfo/>
-        </FadeInView>
-      </View>
-    )
-  }
+    
+    render() {
+      return (
+        <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+          <FadeInView>
+              <CharacterInfo/>
+          </FadeInView>
+        </View>
+      );
+    }
 }
