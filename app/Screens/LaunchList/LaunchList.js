@@ -5,7 +5,8 @@ import {
     View,
     TouchableOpacity,
     Alert,
-    SectionList
+    SectionList,
+    Button
 } from "react-native";
 import styles from './styles'
 import LaunchService from "../../Services/LaunchService";
@@ -30,8 +31,14 @@ export default class LaunchList extends Component {
     }
 
     async loadData() {
-        console.log("before fetch");
         var launchData = await LaunchService.getLaunchesAsync();
+        this.setState({
+            launchList: launchData
+        });
+    }
+
+    async loadCacheData() {
+        var launchData = await LaunchService.getCachedLaunchesAsync();
         this.setState({
             launchList: launchData
         });
@@ -45,6 +52,16 @@ export default class LaunchList extends Component {
         const navigation = this.props.screenProps;
         return (
             <View style={styles.mainView}>
+                <View style={styles.buttonSpacer} />
+                <Button title="Load from Cache" color="#9370DB" onPress={async () => {
+                    await this.loadCacheData();
+                }}></Button>
+                 <View style={styles.buttonSpacer} />
+                <Button title="Clear list" color="#9370DB" onPress={async () => {
+                    this.setState({
+                        launchList: JSON.parse('[]')
+                    });
+                }}></Button>
                 <SectionList
                     style={styles.listView}
                     sections={this.state.launchList}
